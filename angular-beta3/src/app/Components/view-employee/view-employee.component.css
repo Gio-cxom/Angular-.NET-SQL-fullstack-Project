@@ -1,0 +1,135 @@
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px;
+}
+.employee-container{
+    width: 350px;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid #05335413;
+    border-radius: 10px;
+    line-height: 15px;
+}
+.employee-container img{
+    object-fit: cover;
+    border-radius: 100%;
+    width: 250px;
+    height: 250px;
+}
+.employee-container label{
+    font-size: 20px;
+    color: #053354;
+    font-weight: bolder;
+}
+.employee-container h3{
+    font-size: 15px;
+    color: #05335482;
+}
+.employee-container span{
+    font-size: 25px;
+    color: #FFD233;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.employee-container h4{
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #05335482;
+    margin: 0;
+}
+.employee-container p{
+    font-size: 14px;
+    color: #053354;
+    font-weight: bolder;
+}
+.employee-container h2{
+    margin-top: 20px;
+    margin-bottom: 0;
+    color: #18A4E1;
+}
+.employee-container:hover{
+    transform: scale(1.01);
+}
+.category-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 300px;
+    height: 800px;
+    border: 1px solid #ECF2F8;
+    border-radius: 10px;
+}
+.category-container strong{
+    width: 100%;
+    border-bottom: 1px solid #ECF2F8;
+    margin-bottom: 10px;
+}
+.category-container h2{
+    margin-left: 20px;
+    color: #053354;
+    padding-left: 30px;
+}
+.category-container p{
+    color: #053354;
+    padding-left: 30px;
+}
+.category-container p span{
+    color: #050c5487;
+}
+.category-container p small{
+    display: none;
+}
+.categories {
+    min-width: 300px;
+    margin-bottom: 5px;
+    position: relative;
+}
+.categories:hover{
+    cursor: pointer;
+    background-color: #ecf2f896;
+}
+.categories:hover p span{
+    color: #18A4E1;
+}
+.categories:hover p small{
+    display: inline;
+    font-size: 15px;
+    font-weight: bolder;
+    position: absolute;
+    right: 40px;
+    color: #18A4E1;
+}
+.calendar-container{
+    width: 700px;
+    height: 500px;
+    display: flex;
+    align-items: top;
+    justify-content: top;
+}
+@media screen and (max-width:900px){
+    .container{
+        flex-direction: column;
+    }
+    .category-container{
+        height: 100%;
+        margin-bottom: 20px;
+    }
+    .employee-container{
+        height: 100%;
+        padding-top: 20px;
+    }
+    .calendar-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        margin: 70px 0px;
+        width: 100%;
+    }
+}

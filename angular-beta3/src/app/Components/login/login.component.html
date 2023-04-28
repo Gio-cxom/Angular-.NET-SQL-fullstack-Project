@@ -1,0 +1,17 @@
+<app-header></app-header>
+<section>
+    <form [formGroup]="loginForm">
+    <div class="container-div">
+        <h2>ავტორიზაცია</h2>
+        <div class="input-div">
+            <input type="email" placeholder="ელ.ფოსტა" formControlName="email">
+            <small *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">*შეიყვანეთ ემეილი!</small>
+            <input type="password" placeholder="პაროლი" formControlName="password">
+            <small *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*შეიყვანეთ პაროლი!</small>
+        </div>
+        <a routerLink="/reset">პაროლის აღდგენა</a>
+        <button (click)="onLogin()">შესვლა</button>
+    </div>
+    </form>
+</section>
+<app-footer></app-footer>

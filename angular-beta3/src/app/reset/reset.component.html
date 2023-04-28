@@ -1,0 +1,14 @@
+<app-header></app-header>
+<div class="container" [formGroup]="loginForm">
+    <div class="input-div">
+        <label for="email">დაგავიწყდათ პაროლი?</label>
+        <input type="email" placeholder="შეიყვანეთ თქვენი მაილი"  formControlName="email" (ngModelChange)="checkValidEmail($event)" [(ngModel)]="resetPasswordEmail">
+        <small style="color: red;" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">
+            *შეიყვანეთ ემეილი!</small>
+        <small style="color: red;" *ngIf="!isValidEmail&& resetPasswordEmail">
+            *მეილი არასწორია!</small>
+        <button type="submit" (click)="confirmToSend()">გაგზავნა</button>
+    </div>
+</div>
+<app-footer></app-footer>
+

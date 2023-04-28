@@ -1,0 +1,27 @@
+<app-header></app-header>
+<div class="container">
+    <div class="category-container">
+        <h2>კატეგორიები</h2>
+            <strong></strong>
+            <div class="categories" *ngFor="let employee of employees">
+              <p><span>( {{employee.category.length}} )</span> {{employee.category}} <small>></small></p>
+            </div>
+    </div>
+    <div class="employee-container">
+        <img src="{{employeeDetails.image}}" alt="">
+        <h2>{{employeeDetails.name}} {{employeeDetails.surname}}</h2>
+        <p>ექიმი</p>
+        <h4>{{employeeDetails.category}}</h4>
+        <span>{{employeeDetails.raiting}}</span>
+        <label for="personalId">პირადი ნომერი:</label>
+        <h3>{{employeeDetails.personalId}}</h3>
+        <label for="email">Email:</label>
+        <h3>{{employeeDetails.email}}</h3>
+        <label for="category">დაჯავშნილია</label>
+        <h3>({{employeeDetails.category.length}})</h3>
+    </div>
+    <div class="calendar-container">
+        <app-calendar [(ngModel)]="employeeDetails.id"></app-calendar>
+    </div>
+</div>
+<app-footer></app-footer>

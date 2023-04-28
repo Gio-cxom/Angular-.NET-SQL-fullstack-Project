@@ -1,0 +1,45 @@
+<app-header></app-header>
+<section>
+    <form [formGroup]="signUpForm">
+    <div class="container-div">
+        <h2>რეგისტრაცია</h2>
+        <div class="input-main-div">
+            <div class="input-div">
+               <label for="firstName">სახელი</label>
+               <input type="text" name="firstName" placeholder="(მინიმუმ 5 სიმბოლო)" formControlName="firstName">
+               <small *ngIf="signUpForm.controls['firstName'].dirty && signUpForm.hasError('required','firstName')">*შეიყვანეთ სახელი!</small>
+            </div>
+            <div class="input-div">
+                <label for="lastName">გვარი</label>
+                <input type="text" name="lastName" formControlName="lastName">
+                <small *ngIf="signUpForm.controls['lastName'].dirty && signUpForm.hasError('required','lastName')">*შეიყვანეთ გვარი!</small>
+             </div>
+        </div>
+        <div class="input-main-div">
+            <div class="input-div">
+               <label for="email">Email</label>
+               <input type="email" name="email" placeholder=""  formControlName="email">
+               <small *ngIf="signUpForm.controls['email'].dirty && signUpForm.hasError('required','email')">*შეიყვანეთ ემეილი!</small>
+            </div>
+            <div class="input-div">
+                <label for="activationCode">აქტივაციის კოდი</label>
+                <input type="text" name="activationCode">
+             </div>
+        </div>
+        <div class="input-main-div">
+            <div class="input-div">
+               <label for="userId">პირადი ნომერი</label>
+               <input type="text" name="userId" placeholder="00000000000"  formControlName="userId">
+               <small *ngIf="signUpForm.controls['userId'].dirty && signUpForm.hasError('required','userId')">*შეიყვანეთ პირადინომერი!</small>
+            </div>
+            <div class="input-div">
+                <label for="password">პაროლი</label>
+                <input type="password" name="password" placeholder="(მინიმუმ 8 სიმბოლო @*!Z)" formControlName="password">
+                <small *ngIf="signUpForm.controls['password'].dirty && signUpForm.hasError('required','password')">*შეიყვანეთ პაროლი!</small>
+            </div>
+        </div>
+        <button (click)="onSignup()">რეგისტრაცია</button>
+    </div>
+    </form>
+</section>
+<app-footer></app-footer>

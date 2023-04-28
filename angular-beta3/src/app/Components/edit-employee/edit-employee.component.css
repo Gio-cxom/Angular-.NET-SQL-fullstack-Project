@@ -1,0 +1,191 @@
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.container-doctor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.doctor-div{
+   width: 400px;
+   height: 500px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+}
+.doctor-div img{
+    width: 160px;
+    height: 160px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+.doctor-div input{
+    text-align: center;
+    border: none;
+}
+.doctor-div p {
+    margin: 0;
+}
+.name-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+}
+.name-div input{
+  color: #18A4E1;
+  background-color: transparent;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 20px;
+}
+.name-input{
+   width: 75px;
+}
+.surname-input{
+   width: 120px;
+}
+.category-input{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    position: relative;
+    margin: 10px;
+}
+.category-input select{
+   width: 18px;
+   right: 0px;
+   top: 20px;
+   font-size: 20px;
+}
+.category-input p{
+    text-align: center;
+    left: 25%;
+    top: 20px;
+    width: 100px;
+    color: #FFD233;
+    margin-left: 10px;
+    font-size: 15px;
+}
+.buttons-div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    height: 100px;
+}
+.buttons-div button{
+    border: none;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: white;
+    border-radius: 50px;
+    padding: 0px 10px;
+}
+.buttons-div button:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+}
+.buttons-div button img{
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+.buttons-div button:nth-child(1){
+    background-color: #3ACF99;
+    width: 100px;
+}
+.buttons-div button:nth-child(2){
+    background-color: #ECF2F8;
+    color: #18A4E1;
+}
+.buttons-div button:nth-child(3){
+    background-color: #FF93A6;
+    width: 120px;
+}
+.doctor-info-div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 300px;
+    height: 500px;
+    padding-top:100px;
+    color: #18A4E1;
+}
+.doctor-info-div input{
+    border: none;
+    height: 30px;
+    width: 200px;
+   border-bottom: 1px solid #18A4E1;
+   margin-bottom: 20px;
+}
+.calendar-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 800px;
+    height: 400px;
+}
+/* Responsive */
+@media screen and (max-width:1300px){
+    .main-container{
+        justify-content: center;
+        align-items: center;
+    }
+    .container-doctor{
+        border: 1px solid #ECF2F8;
+        padding: 20px;
+        margin: 20px;
+        border-radius: 10px;
+    }
+    .doctor-form{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+    .doctor-info-div{
+        height: 200px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .calendar-container{
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+}
+@media screen and (max-width:700px){
+    .doctor-div{
+        width: 100%;
+    }
+    .buttons-div{
+        width: 100%;
+    }
+    .buttons-div button:nth-child(1){
+        width: 25%;
+    }
+    .buttons-div button:nth-child(2){
+        width: 40%;
+    }
+    .buttons-div button:nth-child(3){
+        width: 30%;
+    }
+}

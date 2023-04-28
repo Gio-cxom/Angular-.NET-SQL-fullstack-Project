@@ -1,0 +1,67 @@
+<app-header></app-header>
+
+<ng-container *ngIf="role === 'Admin'">
+ <div class="admin-container"> 
+    <h1>კატეგორიები</h1>    
+     <h5 routerLink='add'>დაამატე ექიმი!</h5>
+  <div class="table-container">
+  <table>
+    <thead>
+         <tr>
+             <th style="display: none;">აიდი</th>
+             <th>სახელი</th>
+             <th>კატეგორია</th>
+             <th>ფოტოსურათი</th>
+             <th>რეიტინგი</th>
+             <th></th>
+             <th></th>
+         </tr>
+    </thead>
+    <tbody>
+     <tr *ngFor="let employee of employees">
+         <td style="display: none;">{{employee.id}}</td>
+         <td>{{employee.name}} {{employee.surname}}</td>
+         <td>{{employee.category}}</td>
+         <td><img src="{{employee.image}}" alt=""></td>
+         <td><h2>{{employee.raiting}}</h2></td>
+         <td><a [routerLink]="['/employees','edit',employee.id]">
+            <img src="../../../assets/images/edit-svgrepo-com 8.png">
+         </a></td>
+         <td><button type="reset" (click)="deleteEmployee(employee.id); reloadPage()"> 
+            <img src="../../../assets/images/delete-svgrepo-com 10.png" alt=""> 
+        </button></td>
+     </tr>
+    </tbody>
+  </table>
+  </div>
+ </div>
+</ng-container>
+
+<div>
+    <ng-container *ngIf="role === 'User'">
+    <!-- <ul *ngFor="let user of users">
+        <li>{{user.firstName}} {{user.lastName}}</li>
+    </ul> -->
+    <div class="ng-container">
+        <div class="category-container">
+            <h2>კატეგორიები</h2>
+            <strong></strong>
+            <div class="categories" *ngFor="let employee of employees">
+              <p><span>( {{employee.category.length}} )</span> {{employee.category}} <small>></small></p>
+            </div>
+        </div>
+           <div class="cart-container">
+                <div *ngFor="let employee of employees" class="cart">
+                    <img src="{{employee.image}}" alt="">
+                    <h3>{{employee.name}} {{employee.surname}}</h3>
+                    <p>{{employee.category}}</p>
+                    <span>{{employee.raiting}}</span>
+                    <button [routerLink]="['/employees','view',employee.id]">მიღებაზე ჩაწერა ></button>
+                    <strong class="Views"> <img src="../../../assets/images/ic_baseline-remove-red-eye.png" alt="">1230</strong>
+                    <strong class="pin" ><img src="../../../assets/images/pin-svgrepo-com 1.png" alt=""></strong>
+                </div>
+           </div>
+    </div>
+   </ng-container>
+</div>
+<app-footer></app-footer>

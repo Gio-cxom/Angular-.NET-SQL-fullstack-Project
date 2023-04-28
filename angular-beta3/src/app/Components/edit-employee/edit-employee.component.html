@@ -1,0 +1,63 @@
+<app-header></app-header>
+<ng-container *ngIf="role === 'Admin'">
+<div class="main-container">
+    <div class="container-doctor">
+        <form action="" #form="ngForm" class="doctor-form" (ngSubmit)="updateEmployee()">
+         <div class="doctor-div">
+            <img src="{{employeeDetails.image}}" alt="">
+            <div class="name-div">
+                <input class="name-input" type="text" [(ngModel)]="employeeDetails.name" [ngModelOptions]="{standalone: true}">
+                <input class="surname-input" type="text" [(ngModel)]="employeeDetails.surname" [ngModelOptions]="{standalone: true}">
+            </div>
+            <p>Doctor</p>
+            <div class="category-input">
+                <p [(ngModel)]="employeeDetails.category" [ngModelOptions]="{standalone: true}">{{employeeDetails.category}}</p>
+                <select type="text" [(ngModel)]="employeeDetails.category" [ngModelOptions]="{standalone: true}">
+                    <option value="ანდროლოგი">ანდროლოგი</option>
+                    <option value="ანესთეზიოლოგი">ანესთეზიოლოგი</option>
+                    <option value="კოსმეტოლოგი">კოსმეტოლოგი</option>
+                    <option value="ლაბორანტი">ლაბორანტი</option>
+                </select>
+            </div>
+            <div class="category-input">
+                <p [(ngModel)]="employeeDetails.raiting" [ngModelOptions]="{standalone: true}">{{employeeDetails.raiting}}</p>
+                <select type="text" [(ngModel)]="employeeDetails.raiting" [ngModelOptions]="{standalone: true}">
+                    <option value="★★★">★★★</option>
+                    <option value="★★★★">★★★★</option>
+                    <option value="★★★★★">★★★★★</option>
+                </select>
+            </div>
+            <div class="buttons-div">
+                <button>+დამატება</button>
+                <button><img src="../../../assets/images/edit-svgrepo-com 3 (1).png" alt="">რედაქტირება</button>
+                <button (click)="deleteEmployee(employeeDetails.id)"><img src="../../../assets/images/delete-file-svgrepo-com 3.png" alt="">წაშლა</button>
+            </div>
+         </div>
+        <div class="doctor-info-div">
+            <label for="number"><img>პირადი ნომერი </label>
+            <input type="number" [(ngModel)]="employeeDetails.personalId" [ngModelOptions]="{standalone: true}">
+            <label for="email"><img>Email </label>
+            <input type="email" [(ngModel)]="employeeDetails.email" [ngModelOptions]="{standalone: true}" >
+            <label for="password"><img>პაროლის შეცვლა </label>
+            <input type="password">
+        </div>
+        <div class="doctor-info-div" [(ngModel)]="employeeDetails.id">
+            <label for="Rent"><img>ჯავშანი </label>
+            <input type="text">
+            <label for="image"><img>სურათის URL </label>
+            <input type="text"[(ngModel)]="employeeDetails.image" [ngModelOptions]="{standalone: true}">
+        </div>
+    </form>
+</div>
+    <div class="calendar-container">
+        <app-calendar></app-calendar>
+    </div>
+</div>
+</ng-container>
+<ng-container *ngIf="role === 'User'">
+    <div>
+        <h1>თქვენ არ ხართ ადმინი!</h1>
+        <button routerLink="/employees">დაბრუნდით უკან</button>
+    </div>
+</ng-container>
+<app-footer></app-footer>

@@ -1,0 +1,47 @@
+<app-header></app-header>
+<ng-container  *ngIf="role === 'Admin'">
+ <div class="container">
+    <h1>დაამატეთ ექიმი!</h1>
+    <form #form="ngForm" (ngSubmit)="addEmployee()" >
+        <div class="input-div">
+            <label for="Name">სახელი</label>
+            <input type="text" placeholder="Name" name="name" [(ngModel)]="addEmployeeRequest.name">
+            <label for="Surname">გვარი</label>
+            <input type="text" placeholder="Surname" name="surname"  [(ngModel)]="addEmployeeRequest.surname">
+            <label for="Image">სურათის URL!</label>
+            <input type="text" placeholder="Image URL" name="image" [(ngModel)]="addEmployeeRequest.image">
+        </div>
+        <div class="input-div2">
+            <label for="Email">Email</label>
+            <input class="input1" type="email" placeholder="Email" name="email" [(ngModel)]="addEmployeeRequest.email">
+            <label for="raiting">რეიტინგი</label>
+            <select class="raiting-value" name="raiting" id="raiting" [(ngModel)]="addEmployeeRequest.raiting">
+                <option value="★★★">★★★</option>
+                <option value="★★★★">★★★★</option>
+                <option value="★★★★★">★★★★★</option>
+            </select>
+            <label for="CV">CV</label>
+            <input class="CV-input" type="file" placeholder="CV">
+        </div>
+        <div class="input-div">
+            <label for="PersonalID">პირადი ნომერი</label>
+            <input type="number" placeholder="0000000000" name="personalID" [(ngModel)]="addEmployeeRequest.personalId">
+            <label for="category">კატეგორია</label>
+            <select name="category" id="category" [(ngModel)]="addEmployeeRequest.category">
+                <option value="ანდროლოგი">ანდროლოგი</option>
+                <option value="ანესთეზიოლოგი">ანესთეზიოლოგი</option>
+                <option value="კოსმეტოლოგი">კოსმეტოლოგი</option>
+                <option value="ლაბორანტი">ლაბორანტი</option>
+              </select>
+              <button type="submit">დამახსოვრება!</button>
+        </div>
+    </form>
+ </div>
+</ng-container>
+<ng-container *ngIf="role === 'User'">
+    <div>
+        <h1>თქვენ არ ხართ ადმინი!</h1>
+        <button routerLink="/employees">დაბრუნდით უკან</button>
+    </div>
+</ng-container>
+<app-footer></app-footer>

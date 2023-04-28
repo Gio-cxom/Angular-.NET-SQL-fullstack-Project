@@ -1,0 +1,56 @@
+<header>
+    <div class="nav-div">
+        <div class="logo-div">
+            <img src="../../../../assets/images/logo 1.png" alt="">
+            <h2>კლინიკა</h2>
+        </div>
+        <nav>
+            <input id="nav-toggle" type="checkbox">
+            <ul class="links">
+                <li routerLink="/employees">ექიმები<span></span></li>
+                <li routerLink="/employees">კლინიკები<span></span></li>
+                <li routerLink="/employees">ანოტაციები<span></span></li>
+                <li routerLink="/employees">აქციები<span></span></li>
+                <li routerLink="/employees">სერვისები<span></span></li>
+                <li routerLink="/employees">მედიკამენტები<span></span></li>
+                <li >კონტაქტი<span></span></li>
+                <span class="ul-span"></span>
+            </ul>
+            <label for="nav-toggle" class="icon-burger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </label>
+        </nav>  
+        <div class="sign-div" [ngClass]="loggedin3()">
+           <p routerLink="/login" [ngClass]="loggedin()">ავტორიზაცია</p>
+           <span [ngClass]="loggedin()">/</span>
+           <p routerLink="/signup" [ngClass]="loggedin()">რეგისტრაცია</p>
+           <p routerLink="/signup" (click)="logout()" [ngClass]="loggedin2()">გამოსვლა</p>
+           <p [ngClass]="loggedin2()">მოგესალმებით {{fullName}}</p>
+        </div>
+    </div>
+    <div class="src-div">
+        <div class="info-div">
+            <img src="../../../../assets/images/call-svgrepo-com (3) 1.png" alt="">
+            <p>032 2 100 100</p>
+        </div>
+        <div class="info-div">
+            <img src="../../../../assets/images/location-svgrepo-com (1) 2.png" alt="">
+            <p>იაკობ ნიკოლაძე №10</p>
+        </div>
+        <div class="search-div">
+            <input type="text" placeholder="მოძებნე ექიმი სახელით">
+            <input type="text" placeholder="მოძებნე სპეციალობით">
+            <button> <img src="../../../../assets/images/Vector.png" alt=""></button>
+        </div>
+    </div>
+    <div class="clinic-img-div">
+        <img class="clinic-img" src="../../../assets/images/Rectangle 30.jpg" alt="">
+        <h1>აირჩიე კლინიკა რომელსაც<br> შეგიძლია ენდო</h1>
+        <div class="clinic-info">
+            <img src="../../../../assets/images/location-svgrepo-com (1) 2.png" alt="">
+            <p>იაკობ ნიკოლაძე №10</p>
+        </div>
+    </div>
+</header>
