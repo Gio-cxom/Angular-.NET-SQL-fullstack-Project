@@ -29,8 +29,20 @@ export class ResetPasswordComponent implements OnInit{
 
   ngOnInit(): void {
     this.resetPasswordForm=this.fb.group({
-      password:[null,Validators.required],
-      confimPassword:[null,Validators.required]
+      password:[null,
+        [
+          Validators.required,
+          Validators.pattern(/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/),
+          Validators.minLength(8),
+        ]
+      ],
+      confimPassword:[null,
+        [
+          Validators.required,
+          Validators.pattern(/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{8,})/),
+          Validators.minLength(8),
+        ]
+      ],
     },{
       validator: confimPasswordValidator("password", "confimPassword")
     });
@@ -62,7 +74,7 @@ export class ResetPasswordComponent implements OnInit{
         error:(err)=>{
           this.toast.error({
             detail:'ERROR',
-            summary:"შეცდომა!",
+            summary:"მინიმუმ 8 სიმბოლო @*!Z",
             duration:3000,
           });
         }
