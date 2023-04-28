@@ -17,7 +17,7 @@ import { ViewEmployeeComponent } from './Components/view-employee/view-employee.
 import { CalendarComponent } from './Components/calendar/calendar.component';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
-import { ResetComponent } from './reset/reset.component';
+import { ResetComponent } from './Components/reset/reset.component';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
 
 @NgModule({

@@ -8,8 +8,8 @@ import { AddEmployeeComponent } from './Components/add-employee/add-employee.com
 import { EditEmployeeComponent } from './Components/edit-employee/edit-employee.component';
 import { ViewEmployeeComponent } from './Components/view-employee/view-employee.component';
 import { CalendarComponent } from './Components/calendar/calendar.component';
-import { ResetComponent } from './reset/reset.component';
 import { ResetPasswordComponent } from './Components/reset-password/reset-password.component';
+import { ResetComponent } from './Components/reset/reset.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'signup', pathMatch:'full'},

@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../../services/auth.service';
 import { Route, Router } from '@angular/router';
 import { NgToastService } from 'ng-angular-popup';
-import { EmployeeStoreService } from '../services/employee-store.service';
+import { EmployeeStoreService } from '../../services/employee-store.service';
 import ValidateForm from 'src/app/Helpers/validateform';
-import { ResetPasswordService } from '../services/reset-password.service';
+import { ResetPasswordService } from '../../services/reset-password.service';
 
 @Component({
   selector: 'app-reset',
@@ -43,9 +43,9 @@ export class ResetComponent implements OnInit{
          this.resetService.sendResetPasswordLink(this.resetPasswordEmail)
          .subscribe({
           next:(res)=>{
-            this.toast.error({
-              detail:'Success',
-              summary:'პაროლი შეიცვალა!',
+            this.toast.success({
+              detail:'SUCCESS',
+              summary:'შეამოწმეთ მეილი!',
               duration:5000,
             })
             this.resetPasswordEmail='';
