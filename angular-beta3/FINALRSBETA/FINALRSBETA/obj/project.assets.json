@@ -3991,11 +3991,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\FINAL RS\\LOGIN\\FINALRSBETA\\FINALRSBETA\\FINALRSBETA.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Desktop\\RS_FINAL_ANGULAR\\angular-beta3\\FINALRSBETA\\FINALRSBETA\\FINALRSBETA.csproj",
       "projectName": "FINALRSBETA",
-      "projectPath": "D:\\FINAL RS\\LOGIN\\FINALRSBETA\\FINALRSBETA\\FINALRSBETA.csproj",
+      "projectPath": "C:\\Users\\User\\Desktop\\RS_FINAL_ANGULAR\\angular-beta3\\FINALRSBETA\\FINALRSBETA\\FINALRSBETA.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\FINAL RS\\LOGIN\\FINALRSBETA\\FINALRSBETA\\obj\\",
+      "outputPath": "C:\\Users\\User\\Desktop\\RS_FINAL_ANGULAR\\angular-beta3\\FINALRSBETA\\FINALRSBETA\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
